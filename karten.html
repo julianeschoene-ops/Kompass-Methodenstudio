@@ -78,7 +78,7 @@ $('savePng').onclick=async()=>{
  try{
   if(typeof html2canvas!=='function')throw Error('Die Bildexport-Bibliothek wurde nicht geladen. Bitte Internetverbindung prüfen.');
   view=makeExportView();
-  view.style.position='fixed';view.style.left='-100000px';view.style.top='0';view.style.zIndex='-1';
+  view.style.position='absolute';view.style.left='0';view.style.top='0';view.style.zIndex='-1';view.style.pointerEvents='none';
   document.body.append(view);
   const canvas=await html2canvas(view,{backgroundColor:'#ffffff',scale:2,logging:false,useCORS:true,windowWidth:Math.max(1200,view.scrollWidth)});
   downloadCanvas(canvas);
