@@ -1,2 +1,47 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOMPASS Methodenstudio</title><style>
-:root{font-family:system-ui,-apple-system,sans-serif;color:#29233d;background:#f7f5fc}*{box-sizing:border-box}body{margin:0}header{background:white;border-bottom:1px solid #e7e1f2;padding:20px max(16px,calc((100vw - 1080px)/2))}h1{margin:0;font-size:clamp(24px,4vw,36px)}header p{color:#706785;margin:6px 0 0}main{max-width:1080px;margin:34px auto;padding:0 16px}.intro{margin-bottom:26px}h2{font-size:22px;margin:0 0 10px}p{line-height:1.5}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:17px}.tile{display:flex;flex-direction:column;gap:10px;border:1px solid #e5def0;background:white;border-radius:18px;padding:22px;text-decoration:none;color:inherit;min-height:220px;box-shadow:0 5px 16px #2c1b4611}.tile:hover{border-color:#7961bd;transform:translateY(-2px)}.icon{font-size:34px}.tile strong{font-size:22px}.tile span{color:#655d72;line-height:1.4}.tag{font-size:12px;color:#574199;background:#efe9ff;border-radius:20px;padding:6px 10px;align-self:flex-start;margin-top:auto}footer{margin-top:35px;color:#777;font-size:13px}</style></head><body><header><h1>🟣 KOMPASS Methodenstudio</h1><p>Interaktive Methoden für Smartboard und iPads</p></header><main><div class="intro"><h2>Was möchtest du heute machen?</h2><p>Erstelle eine Aktivität und teile den Link oder QR-Code. Die Teilnehmenden benötigen keine Anmeldung.</p></div><section class="grid"><a class="tile" href="./karten.html"><div class="icon">🗂️</div><strong>Karten sammeln & sortieren</strong><span>Gemeinsame Kartenwand, Mindmap, Tabelle oder eigene Spalten. Beiträge erst freigeben oder sofort anzeigen.</span><span class="tag">Live-Kartensammlung</span></a><a class="tile" href="./aktivitaet.html?kind=poll"><div class="icon">📊</div><strong>Live-Umfrage</strong><span>Stelle eine Frage, lasse abstimmen und sieh die Ergebnisse live als Balkendiagramm.</span><span class="tag">2–6 Antwortmöglichkeiten</span></a><a class="tile" href="./aktivitaet.html?kind=quiz"><div class="icon">🏆</div><strong>Quiz</strong><span>Erstelle eine Quizfrage mit einer richtigen Antwort und sammle Antworten von Schüler-iPads.</span><span class="tag">Erste Version: eine Frage pro Runde</span></a></section><footer>Eigenständige KOMPASS-Ergänzung · Aktivitäten sind derzeit auf 48 Stunden begrenzt · Bitte keine personenbezogenen oder vertraulichen Angaben eingeben.</footer></main></body></html>
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KOMPASS · Methodenstudio</title>
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#28263a;background:#f6f6f9}
+*{box-sizing:border-box}body{margin:0;min-height:100vh}a{color:inherit}
+.shell{max-width:1200px;margin:auto;padding:0 26px}
+header{background:#fff;border-bottom:1px solid #e8e8ef}
+.top{min-height:86px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;gap:13px}
+.mark{width:44px;height:44px;border-radius:13px;background:#514078;display:grid;place-items:center;color:#fff;font-size:20px;font-weight:850;letter-spacing:-2px}
+.brandname{font-size:21px;letter-spacing:-.5px;font-weight:780}
+.brandname span{font-weight:450;color:#786b90}
+.sub{font-size:12px;color:#88839a;margin-top:2px;letter-spacing:.3px}
+.navlabel{font-size:13px;color:#6d6880;background:#f6f5f9;border:1px solid #eceaf1;padding:9px 13px;border-radius:10px}
+main{padding-top:46px!important;padding-bottom:65px!important}
+.eyebrow{font-size:12px;font-weight:750;letter-spacing:2px;color:#74638f;text-transform:uppercase}
+h1{font-size:clamp(28px,4vw,40px);letter-spacing:-1.3px;line-height:1.12;margin:13px 0 13px;font-weight:790}
+.lead{font-size:16px;line-height:1.6;color:#777283;max-width:650px;margin:0}
+.sectionhead{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:44px 0 18px}
+h2{font-size:17px;letter-spacing:-.3px;margin:0} .hint{color:#918b9c;font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.tile{display:flex;flex-direction:column;gap:14px;min-height:273px;border:1px solid #e7e5ed;background:#fff;border-radius:17px;padding:25px;text-decoration:none;box-shadow:0 3px 10px #27203705;transition:border-color .15s,transform .15s,box-shadow .15s}
+.tile:hover,.tile:focus-visible{border-color:#9b86c1;transform:translateY(-2px);box-shadow:0 11px 24px #2e22400e;outline:none}
+.symbol{height:53px;width:53px;border-radius:14px;display:grid;place-items:center;background:#f1ecfa;color:#59437b}
+.tile.poll .symbol{background:#edf2f9;color:#476c9d}.tile.quiz .symbol{background:#eef5f0;color:#4c7964}
+.tile h3{font-size:20px;letter-spacing:-.5px;margin:0;font-weight:750}
+.tile p{font-size:14px;line-height:1.6;color:#777180;margin:0;flex:1}
+.bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #efedf3;padding-top:14px;gap:8px;font-size:12px;color:#6e657f}
+.arrow{display:grid;place-items:center;border:1px solid #e9e5ef;width:30px;height:30px;border-radius:9px;color:#514078;font-size:18px}
+.info{border:1px solid #e7e5ed;background:#fff;border-radius:15px;margin-top:25px;padding:18px 21px;display:flex;align-items:center;gap:14px;color:#726c7b;font-size:13px;line-height:1.5}
+.dot{height:8px;width:8px;border-radius:50%;background:#8c80a8;flex:none}
+footer{font-size:12px;color:#9a95a3;margin-top:26px}
+@media(max-width:800px){.grid{grid-template-columns:1fr}.tile{min-height:210px}.shell{padding:0 18px}.top{min-height:76px}.navlabel{display:none}main{padding-top:34px!important}.sectionhead{margin-top:34px}}
+@media(prefers-reduced-motion:reduce){.tile{transition:none}}
+</style></head>
+<body><header><div class="shell top"><div class="brand"><div class="mark" aria-hidden="true">K</div><div><div class="brandname">KOMPASS <span>/ Methodenstudio</span></div><div class="sub">INTERAKTIVER UNTERRICHT</div></div></div><div class="navlabel">Smartboard &amp; iPad</div></div></header>
+<main class="shell"><div class="eyebrow">Methodenübersicht</div><h1>Was möchtest du heute gestalten?</h1><p class="lead">Eine Methode auswählen, Inhalte vorbereiten und gemeinsam arbeiten. Deine Klasse oder dein Kollegium nimmt über einen Link oder QR-Code teil.</p>
+<div class="sectionhead"><h2>Methoden auswählen</h2><span class="hint">3 Methoden verfügbar</span></div>
+<section class="grid" aria-label="Methoden">
+<a class="tile cards" href="./karten.html"><div class="symbol"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="13" height="14" rx="2"/><path d="M7 8h5M7 12h5"/><rect x="10" y="8" width="11" height="13" rx="2"/></svg></div><h3>Kartenstudio</h3><p>Ideen gemeinsam sammeln und flexibel anordnen – als Mindmap, Tabelle, freie Kartenwand oder in selbst festgelegten Spalten.</p><div class="bottom"><span>Gemeinsam sammeln &amp; sortieren</span><span class="arrow" aria-hidden="true">→</span></div></a>
+<a class="tile poll" href="./aktivitaet.html?kind=poll"><div class="symbol"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V12h4v8M10 20V4h4v16M16 20v-11h4v11"/><path d="M2 20h20"/></svg></div><h3>Live-Umfrage</h3><p>Meinungen und Einschätzungen abfragen. Ergebnisse werden live gesammelt und als Diagramm sichtbar.</p><div class="bottom"><span>Abstimmen &amp; auswerten</span><span class="arrow" aria-hidden="true">→</span></div></a>
+<a class="tile quiz" href="./aktivitaet.html?kind=quiz"><div class="symbol"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="m8 9 2 2 4-4M8 16h8"/></svg></div><h3>Quiz</h3><p>Wissen spielerisch überprüfen und Antworten über die iPads sammeln. Aktuell eine Frage pro Runde.</p><div class="bottom"><span>Wissen überprüfen</span><span class="arrow" aria-hidden="true">→</span></div></a>
+</section>
+<div class="info"><span class="dot"></span><span>Teilnehmende brauchen keine Anmeldung. Du kannst Aktivitäten am Smartboard zeigen und Beiträge über einen Teilnahme-Link einsammeln.</span></div>
+<footer>Eigenständige KOMPASS-Ergänzung · Sitzungen sind derzeit auf 48 Stunden begrenzt · Bitte keine vertraulichen oder personenbezogenen Inhalte eingeben.</footer>
+</main></body></html>
